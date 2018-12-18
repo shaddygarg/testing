@@ -7,4 +7,4 @@ from rest_framework.viewsets import ModelViewSet
 
 class EventViewSet(ModelViewSet):
     serializer_class = EventSerializer
-    queryset = Event.objects.all()
+    queryset = Event.objects.filter(current_live=True)
